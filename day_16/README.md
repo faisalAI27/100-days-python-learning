@@ -1,0 +1,1 @@
+The day 16 lesson is completed in which i have learned about modules and packages.Those module and packages contain the classes and those classes have attributes and methods.I have create object to access the attribute and method of those class.
