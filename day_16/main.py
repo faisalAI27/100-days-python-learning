@@ -1,29 +1,24 @@
-#just an example for better understanding.
-#import another_module
-#print(another_module.another_variable)
+from menu import Menu,MenuItem
+from coffee_maker import CoffeeMaker
+from money_machine import MoneyMachine
 
-#first way to import the turtle module
-#import turtle
-#timmy=turtle.Turtle()
-#print(timmy)
+my_money_machine=MoneyMachine()
+resources=CoffeeMaker()
+my_money_machine.report()
+resources.report()
+menu=Menu()
+is_on=True
+while is_on:
+    options=menu.get_items()
+    choice=input(f"what would you like to drink(latte/espresso/cappuccino){options}")
+    if choice=="off":
+        is_on=False
+    elif choice=="report":
+        my_money_machine.report()
+        resources.report()
+    else:
+        drink=menu.find_drink(choice)
+        if resources.is_resource_sufficient(drink) and my_money_machine.make_payment(drink.cost):
+             resources.make_coffee(drink)
 
-#another way to import the turtle module
-#class is represented by capital letter.
-#from turtle import Turtle,Screen
 
-#timmy=Turtle()
-#timmy.shape("turtle")
-#timmy.color("coral")
-#timmy.forward(100)
-
-#print(timmy)
-#my_screen=Screen()
-#my_screen.exitonclick()
-from prettytable import PrettyTable
-table=PrettyTable()
-table.add_column("Pokemon Name",["Pikachu","Squirtle","Charmander"])
-table.add_column("Type",["Electric","Water","Fire"])
-print(table.align)
-table.align="l"
-print(table)
-print(table.align)
