@@ -1,1 +1,1 @@
-i have learned about constructor when we create the object it automatically initialize the attributes of that object.
+i have learned about constructor when we create the object it automatically initialize the attributes of that object.I have learned other important concepts which include how to call different class methods in other class.
