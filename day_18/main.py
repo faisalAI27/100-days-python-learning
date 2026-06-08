@@ -3,6 +3,7 @@ import turtle as t
 
 timmy_the_turtle=t.Turtle()
 colours=['red','green','blue','orange','black','brown','pink']
+t.colormode(255)
 
 def random_color():
     r=random.randint(0,255)
@@ -11,13 +12,16 @@ def random_color():
 
     new_color=(r,g,b)
     return new_color
+#-------------------------------------
+timmy_the_turtle.speed('fastest')
 
-directions=[0,90,180,270]
-timmy_the_turtle.pensize(15)
-timmy_the_turtle.speed(0)
-t.colormode(255)
 
-for _ in range(200):
-    timmy_the_turtle.color(random_color())
-    timmy_the_turtle.forward(30)
-    timmy_the_turtle.setheading(random.choice(directions))
+def draw_spirograph(size_of_gap):
+    for _ in range(int(360/size_of_gap)):
+        timmy_the_turtle.color(random_color())
+        timmy_the_turtle.circle(100)
+        timmy_the_turtle.setheading(timmy_the_turtle.heading()+ size_of_gap)
+draw_spirograph(10)
+
+screen=t.Screen()
+screen.exitonclick()
