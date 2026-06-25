@@ -1,4 +1,4 @@
-# 100 Days of Python Practice
+# 100 Days of Python Practice:
 
 Welcome to my **100 Days of Python Practice** repository.
 
