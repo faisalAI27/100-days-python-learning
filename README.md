@@ -85,5 +85,5 @@ As I continue learning, I will keep updating this repository with new exercises,
 
 ---
 
-Thank you for visiting my repository
+Thank you for visiting my repository.
 
